@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import classes from './footer.module.css';
 
 export const Footer = () => {
   return (
-    <footer>
-      <div>
+    <footer className={classes.footerWrapper}>
+      <div className={classes.footerContent}>
         <Link to="/">
           <img src="src/assets/museum-logo-black.svg" alt="logo" />
         </Link>
