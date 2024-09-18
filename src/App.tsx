@@ -8,7 +8,12 @@ import {
 
 export const App = () => {
   const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<MainLayout />} />)
+    createRoutesFromElements(
+      <Route path="/" element={<MainLayout />}>
+        <Route index />
+        <Route path="/favourites" element={<p>Favourites</p>} />
+      </Route>
+    )
   );
   return <RouterProvider router={router} />;
 };
