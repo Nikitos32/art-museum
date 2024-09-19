@@ -1,3 +1,5 @@
+import { Search } from 'components/UI/Search/Search';
+
 export const SearchSection = () => {
   return (
     <section>
@@ -6,6 +8,7 @@ export const SearchSection = () => {
         <span>Art</span>
         Here!
       </p>
+      <Search />
     </section>
   );
 };
