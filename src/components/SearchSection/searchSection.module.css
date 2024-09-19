@@ -1,6 +1,5 @@
 .searchSectionTitle {
   font-size: 64px;
-  font-family: Lexend Deca;
   font-weight: 700;
   width: 684px;
   text-align: center;
@@ -11,6 +10,8 @@
 }
 
 .searchSection {
+  font-family: Lexend Deca;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

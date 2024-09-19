@@ -1,4 +1,5 @@
 .mainLayoutWrapper {
   display: flex;
+  gap: 100px;
   flex-direction: column;
 }
