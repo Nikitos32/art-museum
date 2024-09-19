@@ -1,9 +1,11 @@
 .mainPageWrapper {
   display: flex;
   justify-content: center;
-  flex: 1 0 auto;
 }
 
 .mainPageContent {
   width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
 }
