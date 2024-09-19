@@ -1,0 +1,50 @@
+.infoWrapper {
+  display: flex;
+  position: relative;
+  bottom: 10%;
+  background: white;
+  align-items: center;
+  border: 1px solid rgba(240, 241, 241, 1);
+  font-family: Lexend Deca;
+  gap: 24px;
+  padding: 24px;
+}
+
+.catalogItemWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favouritesBtn {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(251, 215, 178, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.infoContent {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orangeText {
+  font-size: 16px;
+  color: rgba(224, 164, 73, 1);
+}
+
+.basicText {
+  font-size: 18px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.boldtext {
+  font-weight: 700;
+}
