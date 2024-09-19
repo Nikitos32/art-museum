@@ -1,5 +1,8 @@
 .mainPageWrapper {
   display: flex;
   justify-content: center;
+}
+
+.mainPageContent {
   width: 1280px;
 }
