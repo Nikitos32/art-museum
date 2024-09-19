@@ -1,0 +1,11 @@
+.searchInput {
+  width: 762px;
+  height: 64px;
+  background: rgba(57, 57, 57, 0.05);
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
