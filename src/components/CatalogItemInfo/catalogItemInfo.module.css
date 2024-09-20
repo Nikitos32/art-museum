@@ -17,6 +17,11 @@
 }
 
 .orangeText {
+  width: 219px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 16px;
   font-family: Lexend Deca;
   font-weight: 400;
@@ -25,9 +30,9 @@
 
 .basicText {
   width: 219px;
-  -webkit-line-clamp: 1; /* Число отображаемых строк */
-  display: -webkit-box; /* Включаем флексбоксы */
-  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: Lexend Deca;
   font-weight: 500;

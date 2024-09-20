@@ -15,7 +15,7 @@ export const CatalogItem = ({ art }: CatalogItemProps) => {
         className={classes.imageSize}
       />
       <section className={classes.infoWrapper}>
-        <CatalogItemInfo />
+        <CatalogItemInfo art={art} />
       </section>
     </div>
   );
