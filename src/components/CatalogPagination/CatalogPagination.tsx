@@ -2,14 +2,33 @@ import { PaginationBtn } from 'components/UI/PaginationBtn/PaginationBtn';
 import classes from './catalogPagination.module.css';
 import { IoIosArrowForward } from 'react-icons/io';
 
-export const CatalogPagination = () => {
+interface catalogPaginationProps {
+  currentPage: number;
+  handleCurrentPage: (clickedPage: number) => void;
+}
+
+export const CatalogPagination = ({
+  currentPage,
+  handleCurrentPage,
+}: catalogPaginationProps) => {
   return (
     <p className={classes.catalogPaginationWrapper}>
-      <PaginationBtn value="1" active={true} />
-      <PaginationBtn value="2" />
-      <PaginationBtn value="3" />
-      <PaginationBtn value="4" />
-      <button className={classes.arrowBtn}>
+      {[1, 2, 3, 4].map((elem, index) => {
+        return (
+          <PaginationBtn
+            handleCurrentPage={handleCurrentPage}
+            key={index}
+            value={`${index + 1}`}
+            active={elem === currentPage}
+          />
+        );
+      })}
+      <button
+        onClick={() => {
+          if (currentPage !== 4) handleCurrentPage(currentPage + 1);
+        }}
+        className={classes.arrowBtn}
+      >
         <IoIosArrowForward />
       </button>
     </p>
