@@ -6,7 +6,10 @@ import classes from './catalogSection.module.css';
 export const CatalogSection = () => {
   return (
     <section className={classes.catalogWrapper}>
-      <CatalogSectionTitle />
+      <CatalogSectionTitle
+        firstParagraph="Topics for you"
+        secondParagraph="Our special gallery"
+      />
       <div>
         <CatalogItemList />
         <CatalogPagination />

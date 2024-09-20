@@ -1,0 +1,36 @@
+.favouritesBtn {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(251, 215, 178, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.infoContent {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orangeText {
+  font-size: 16px;
+  font-family: Lexend Deca;
+  font-weight: 400;
+  color: rgba(224, 164, 73, 1);
+}
+
+.basicText {
+  font-family: Lexend Deca;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.boldtext {
+  font-family: Lexend Deca;
+  font-weight: 700;
+}
