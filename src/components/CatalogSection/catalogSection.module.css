@@ -3,3 +3,16 @@
   flex-direction: column;
   gap: 50px;
 }
+
+.galleryWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
