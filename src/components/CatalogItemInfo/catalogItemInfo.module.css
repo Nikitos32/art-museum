@@ -24,6 +24,11 @@
 }
 
 .basicText {
+  width: 219px;
+  -webkit-line-clamp: 1; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
   font-family: Lexend Deca;
   font-weight: 500;
   font-size: 18px;

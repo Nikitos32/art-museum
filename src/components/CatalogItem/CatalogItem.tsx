@@ -1,11 +1,16 @@
+import { ArtItem } from 'constants/interfaces';
 import classes from './catalogItem.module.css';
 import { CatalogItemInfo } from 'components/CatalogItemInfo/CatalogItemInfo';
 
-export const CatalogItem = () => {
+interface CatalogItemProps {
+  art: ArtItem;
+}
+
+export const CatalogItem = ({ art }: CatalogItemProps) => {
   return (
     <div className={classes.catalogItemWrapper}>
       <img
-        src="src/assets/test-image.png"
+        src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
         alt="image"
         className={classes.imageSize}
       />

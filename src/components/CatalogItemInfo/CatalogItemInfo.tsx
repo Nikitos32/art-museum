@@ -6,7 +6,9 @@ export const CatalogItemInfo = () => {
     <>
       <div className={classes.infoContent}>
         <article>
-          <p className={classes.basicText}>Charles V, bust length...</p>
+          <p className={classes.basicText}>
+            Charles V, bust lengthvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+          </p>
           <p className={classes.orangeText}>Giovanni Britto</p>
         </article>
         <p className={classes.boldtext}>public</p>
