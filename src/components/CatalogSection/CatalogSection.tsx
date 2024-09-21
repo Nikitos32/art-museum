@@ -2,9 +2,15 @@ import { CatalogItemList } from 'components/CatalogItemList/CatalogItemList';
 import { CatalogPagination } from 'components/CatalogPagination/CatalogPagination';
 import { CatalogSectionTitle } from 'components/CatalogSectionTitle/CatalogSectionTitle';
 import classes from './catalogSection.module.css';
-import { useDeferredValue, useEffect, useState } from 'react';
-import { ArtItem, Arts, SearchArts } from 'constants/interfaces';
+import { useEffect, useState } from 'react';
+import {
+  ArtItem,
+  Arts,
+  SearchArts,
+  SearchArtsItem,
+} from 'constants/interfaces';
 import { Oval } from 'react-loader-spinner';
+import useDebounce from 'hooks/useDebounce';
 
 interface CatalogSectionProps {
   query: string;
@@ -13,8 +19,9 @@ interface CatalogSectionProps {
 export const CatalogSection = ({ query }: CatalogSectionProps) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [arts, setArts] = useState<ArtItem[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchArtsItem[]>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const defferValueQuery = useDeferredValue(query);
+  const defferValueQuery = useDebounce<string>(query, 500);
 
   const handleCurrentPage = (clickedPage: number) => {
     setCurrentPage(clickedPage);
@@ -22,29 +29,15 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
 
   useEffect(() => {
     setIsLoading(true);
-  }, []);
-
-  useEffect(() => {
-    setIsLoading(true);
     if (defferValueQuery) {
       fetch(
-        `https://api.artic.edu/api/v1/artworks/search?q=${defferValueQuery}&limit=3`
+        `https://api.artic.edu/api/v1/artworks/search?q=${defferValueQuery}&limit=3&from=${currentPage * 3}`
       )
         .then((data) => {
           return data.json();
         })
         .then((data: SearchArts) => {
-          const searchArtsArray: ArtItem[] = [];
-          for (let i = 0; i < data.data.length; i++) {
-            fetch(data.data[i].api_link)
-              .then((data) => {
-                return data.json();
-              })
-              .then((data: Arts) => {
-                searchArtsArray.push(data.data as ArtItem);
-              });
-          }
-          setArts(searchArtsArray);
+          setSearchResults(data.data);
           setIsLoading(false);
         });
     } else {
@@ -78,7 +71,11 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
             wrapperClass={classes.loader}
           />
         ) : (
-          <CatalogItemList arts={arts} />
+          <CatalogItemList
+            query={defferValueQuery}
+            searchArts={searchResults}
+            arts={arts}
+          />
         )}
         <CatalogPagination
           currentPage={currentPage}
