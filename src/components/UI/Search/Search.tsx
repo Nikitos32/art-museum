@@ -15,6 +15,7 @@ interface Inputs {
 export const Search = ({ handleQuery, query }: SearchProps) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const OnSubmit: SubmitHandler<Inputs> = (data, event) => {
+    data.search.toString();
     event?.preventDefault();
   };
   return (
