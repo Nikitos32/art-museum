@@ -27,6 +27,10 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
     setCurrentPage(clickedPage);
   };
 
+  const handleLoading = (type: boolean) => {
+    setIsLoading(type);
+  };
+
   useEffect(() => {
     setIsLoading(true);
     if (defferValueQuery) {
@@ -72,6 +76,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
           />
         ) : (
           <CatalogItemList
+            handleLoading={handleLoading}
             query={defferValueQuery}
             searchArts={searchResults}
             arts={arts}

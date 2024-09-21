@@ -7,8 +7,8 @@ import { ChangeEvent, useState } from 'react';
 export const MainPage = () => {
   const [query, setQuery] = useState<string>('');
 
-  const handleQuery = (event: ChangeEvent) => {
-    const target = event.target as HTMLInputElement;
+  const handleQuery = (event?: ChangeEvent) => {
+    const target = event?.target as HTMLInputElement;
     setQuery(target.value);
   };
 

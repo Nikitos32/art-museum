@@ -8,6 +8,7 @@ interface CatalogItemListProps {
   arts: ArtItem[];
   searchArts?: SearchArtsItem[];
   query: string;
+  handleLoading: (type: boolean) => void;
 }
 
 export const CatalogItemList = ({
@@ -29,10 +30,11 @@ export const CatalogItemList = ({
     });
     return setFetchArt([]);
   }, [searchArts]);
+  console.log(searchArts);
 
   return (
     <div className={classes.catalogItemListWrapper}>
-      {fetchArt.length === 0 && query ? (
+      {searchArts?.length === 0 && query ? (
         <EmptyResults />
       ) : query ? (
         fetchArt.map((elem) => {
