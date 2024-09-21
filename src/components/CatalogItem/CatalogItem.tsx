@@ -10,7 +10,7 @@ interface CatalogItemProps {
 export const CatalogItem = ({ art }: CatalogItemProps) => {
   return (
     <Link
-      to={`${art.title}`}
+      to={`${art.id}`}
       className={classes.catalogItemWrapper}
       style={{ textDecoration: 'none' }}
     >

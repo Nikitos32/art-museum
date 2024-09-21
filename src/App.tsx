@@ -14,7 +14,7 @@ export const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<MainPage />} />
         <Route path="/favourites" element={<p>Favourites</p>} />
-        <Route path="/:artTitle" element={<ArtPage />} />
+        <Route path="/:artId" element={<ArtPage />} />
       </Route>
     )
   );

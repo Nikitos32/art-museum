@@ -1,0 +1,97 @@
+.artPageWrapper {
+  display: flex;
+  max-width: 1280px;
+  gap: 100px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.imageSize {
+  width: 497px;
+  height: 570px;
+}
+
+.orangeText {
+  color: rgba(224, 164, 73, 1);
+}
+
+.infoSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.wrapperInfoSectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.authorInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dateText {
+  font-weight: 700;
+}
+
+.overviewText {
+  font-size: 32px;
+  font-weight: 400px;
+}
+
+.overviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.backBtn {
+  border: none;
+  background: rgba(251, 215, 178, 0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.wrapper {
+  width: 1280px;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  flex-shrink: 1;
+}
+
+.backBtn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(224, 164, 73, 1);
+}
+
+.imageWrapper {
+  z-index: -1;
+  position: relative;
+  bottom: 65px;
+  left: 15px;
+  width: 497px;
+  height: 570px;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
