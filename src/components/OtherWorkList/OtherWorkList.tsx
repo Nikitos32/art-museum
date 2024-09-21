@@ -1,7 +1,7 @@
 import { OtherWorkItem } from 'components/OtherWorkItem/OtherWorkItem';
 import classes from './otherWorkList.module.css';
 import { useEffect, useState } from 'react';
-import { Arts } from 'constants/interfaces';
+import { ArtItem, Arts } from 'constants/interfaces';
 
 export const OtherWorkList = () => {
   const [arts, setArts] = useState<Arts>({ data: [] });
@@ -18,7 +18,7 @@ export const OtherWorkList = () => {
 
   return (
     <div className={classes.otherWorkListWrapper}>
-      {arts.data.map((elem) => {
+      {(arts.data as ArtItem[]).map((elem) => {
         return <OtherWorkItem art={elem} key={elem.image_id} />;
       })}
     </div>
