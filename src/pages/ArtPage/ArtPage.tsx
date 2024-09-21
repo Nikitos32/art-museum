@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ArtItem, Arts } from 'constants/interfaces';
 import { IoChevronBackOutline } from 'react-icons/io5';
 import { Oval } from 'react-loader-spinner';
+import { FavouriteBtn } from 'components/UI/FavouriteBtn/FavouriteBtn';
 
 export const ArtPage = () => {
   const [art, setArt] = useState<ArtItem>();
@@ -42,12 +43,15 @@ export const ArtPage = () => {
             </button>
           </Link>
           <div className={classes.artPageWrapper}>
-            <div className={classes.imageWrapper}>
-              <img
-                className={classes.imageSize}
-                src={`https://www.artic.edu/iiif/2/${art?.image_id}/full/843,/0/default.jpg`}
-                alt="image"
-              />
+            <div className={classes.image}>
+              <FavouriteBtn background="white" />
+              <div className={classes.imageWrapper}>
+                <img
+                  className={classes.imageSize}
+                  src={`https://www.artic.edu/iiif/2/${art?.image_id}/full/843,/0/default.jpg`}
+                  alt="image"
+                />
+              </div>
             </div>
             <section className={classes.infoSection}>
               <div className={classes.wrapperInfoSectionContent}>

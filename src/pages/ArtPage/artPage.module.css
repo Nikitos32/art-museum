@@ -81,6 +81,17 @@
 }
 
 .imageWrapper {
+  z-index: -1;
+  position: relative;
+  bottom: 65px;
+  left: 15px;
   width: 497px;
   height: 570px;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
 }
