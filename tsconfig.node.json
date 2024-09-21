@@ -23,7 +23,8 @@
       "assets/*": ["assets/*"],
       "hooks/*": ["hooks/*"],
       "constants/*": ["constants/*"],
-      "pages/*": ["pages/*"]
+      "pages/*": ["pages/*"],
+      "layouts/*": ["layouts/*"]
     }
   },
   "include": ["vite.config.ts"]

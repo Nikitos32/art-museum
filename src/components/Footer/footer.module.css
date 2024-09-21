@@ -1,0 +1,14 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 127px;
+  flex-shrink: 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  height: 63px;
+}

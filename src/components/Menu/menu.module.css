@@ -1,0 +1,18 @@
+.menuSection {
+  justify-content: flex-end;
+  display: flex;
+  width: 235px;
+  height: 24px;
+  gap: 16px;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconColor {
+  color: rgba(224, 164, 73, 1);
+}

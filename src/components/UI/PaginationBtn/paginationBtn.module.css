@@ -1,0 +1,21 @@
+.paginationBtn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  color: rgba(57, 57, 57, 1);
+  font-weight: 300;
+  font-family: Lexend Deca;
+  cursor: pointer;
+}
+
+.activeBtn {
+  font-weight: 600;
+  font-family: Lexend Deca;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(241, 121, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}

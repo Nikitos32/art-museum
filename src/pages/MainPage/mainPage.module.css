@@ -1,0 +1,11 @@
+.mainPageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mainPageContent {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}

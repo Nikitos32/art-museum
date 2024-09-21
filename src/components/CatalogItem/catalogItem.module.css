@@ -1,0 +1,27 @@
+.infoWrapper {
+  display: flex;
+  position: relative;
+  bottom: 10%;
+  background: white;
+  align-items: center;
+  border: 1px solid rgba(240, 241, 241, 1);
+  font-family: Lexend Deca;
+  gap: 24px;
+  padding: 24px;
+}
+
+.catalogItemWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSize {
+  width: 387px;
+  height: 444px;
+}
+
+.catalogItemWrapper:hover .infoWrapper {
+  box-shadow: 1px 1px 10px black;
+}
