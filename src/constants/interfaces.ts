@@ -11,6 +11,7 @@ export interface ArtItem {
   credit_line: string;
   date_display: string;
   image_id: string;
+  id: string;
 }
 
 export interface SearchArts {

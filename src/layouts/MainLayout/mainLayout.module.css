@@ -3,8 +3,12 @@
   gap: 100px;
   flex-direction: column;
   height: 100%;
+  font-family: Lexend Deca;
 }
 
 .outletSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 0 auto;
 }
