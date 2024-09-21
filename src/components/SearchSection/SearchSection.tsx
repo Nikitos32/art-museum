@@ -1,7 +1,13 @@
 import { Search } from 'components/UI/Search/Search';
 import classes from './searchSection.module.css';
+import { ChangeEvent } from 'react';
 
-export const SearchSection = () => {
+interface SearchSectionProps {
+  handleQuery: (event: ChangeEvent) => void;
+  query: string;
+}
+
+export const SearchSection = ({ handleQuery, query }: SearchSectionProps) => {
   return (
     <section className={classes.searchSection}>
       <p className={classes.searchSectionTitle}>
@@ -9,7 +15,7 @@ export const SearchSection = () => {
         <span className={classes.orangeText}> Art </span>
         Here!
       </p>
-      <Search />
+      <Search query={query} handleQuery={handleQuery} />
     </section>
   );
 };

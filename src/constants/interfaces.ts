@@ -1,5 +1,5 @@
 export interface Arts {
-  data: ArtItem[];
+  data: ArtItem[] | ArtItem;
 }
 
 export interface ArtItem {
@@ -11,4 +11,12 @@ export interface ArtItem {
   credit_line: string;
   date_display: string;
   image_id: string;
+}
+
+export interface SearchArts {
+  data: SearchArtsItem[];
+}
+
+export interface SearchArtsItem {
+  api_link: string;
 }
