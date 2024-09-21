@@ -30,7 +30,6 @@ export const CatalogItemList = ({
     });
     return setFetchArt([]);
   }, [searchArts]);
-  console.log(searchArts);
 
   return (
     <div className={classes.catalogItemListWrapper}>

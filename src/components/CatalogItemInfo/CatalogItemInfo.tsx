@@ -1,6 +1,6 @@
-import { PiBookmarkSimpleBold } from 'react-icons/pi';
 import classes from './catalogItemInfo.module.css';
 import { ArtItem } from 'constants/interfaces';
+import { FavouriteBtn } from 'components/UI/FavouriteBtn/FavouriteBtn';
 
 interface CatalogItemInfoProps {
   art?: ArtItem;
@@ -18,9 +18,7 @@ export const CatalogItemInfo = ({ art }: CatalogItemInfoProps) => {
           {art?.is_public_domain ? 'public' : 'private'}
         </p>
       </div>
-      <button className={classes.favouritesBtn}>
-        <PiBookmarkSimpleBold size={24} color="rgba(241, 121, 0, 1)" />
-      </button>
+      <FavouriteBtn />
     </>
   );
 };
