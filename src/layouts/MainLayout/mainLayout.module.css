@@ -1,4 +1,10 @@
 .mainLayoutWrapper {
   display: flex;
+  gap: 100px;
   flex-direction: column;
+  height: 100%;
+}
+
+.outletSection {
+  flex: 1 0 auto;
 }

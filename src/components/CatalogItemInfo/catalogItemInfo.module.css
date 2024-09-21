@@ -1,0 +1,50 @@
+.favouritesBtn {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(251, 215, 178, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.infoContent {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orangeText {
+  width: 219px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: Lexend Deca;
+  font-weight: 400;
+  color: rgba(224, 164, 73, 1);
+}
+
+.basicText {
+  width: 219px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: Lexend Deca;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.boldtext {
+  font-family: Lexend Deca;
+  font-weight: 700;
+}
+
+.favouritesBtn:hover {
+  box-shadow: 1px 1px 2px rgba(224, 164, 73, 1);
+}

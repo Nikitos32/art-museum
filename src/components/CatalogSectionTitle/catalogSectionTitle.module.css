@@ -1,0 +1,17 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Lexend Deca;
+  justify-content: center;
+  align-items: center;
+}
+
+.topicsText {
+  font-size: 16px;
+  color: rgba(224, 164, 73, 1);
+  font-weight: 400;
+}
+
+.mainCatalogTitleText {
+  font-size: 32px;
+}

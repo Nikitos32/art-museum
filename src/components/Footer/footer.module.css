@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 127px;
+  flex-shrink: 0;
 }
 
 .footerContent {

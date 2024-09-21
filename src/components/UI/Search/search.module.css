@@ -1,0 +1,35 @@
+.searchInput {
+  width: 762px;
+  height: 64px;
+  background: rgba(57, 57, 57, 0.05);
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.searchArea {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: Lexend Deca;
+}
+
+.searchBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 16px;
+}
+
+.searchBtn:hover {
+  cursor: pointer;
+}

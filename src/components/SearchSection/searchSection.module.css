@@ -1,0 +1,19 @@
+.searchSectionTitle {
+  font-size: 64px;
+  font-weight: 700;
+  width: 684px;
+  text-align: center;
+}
+
+.orangeText {
+  color: rgba(241, 121, 0, 1);
+}
+
+.searchSection {
+  font-family: Lexend Deca;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

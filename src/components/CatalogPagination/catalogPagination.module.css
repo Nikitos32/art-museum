@@ -1,0 +1,15 @@
+.catalogPaginationWrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3px;
+}
+
+.arrowBtn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
