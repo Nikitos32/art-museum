@@ -15,11 +15,18 @@ export const CatalogItem = ({ art }: CatalogItemProps) => {
         className={classes.imageSizeWrapper}
         style={{ textDecoration: 'none' }}
       >
-        <img
-          src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
-          alt="image"
-          className={classes.imageSize}
-        />
+        {!art.image_id ? (
+          <div className={classes.noImage}>
+            {' '}
+            <p>No Image</p>
+          </div>
+        ) : (
+          <img
+            src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
+            alt="image"
+            className={classes.imageSize}
+          />
+        )}
       </Link>
       <section className={classes.infoWrapper}>
         <CatalogItemInfo art={art} />

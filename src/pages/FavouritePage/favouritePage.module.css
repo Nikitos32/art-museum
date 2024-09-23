@@ -4,7 +4,7 @@
   flex-direction: column;
   align-self: center;
   font-weight: 700;
-  width: 684px;
+  max-width: 684px;
   text-align: center;
 }
 
@@ -32,4 +32,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+  .otherWorkListWrapper {
+    justify-content: center;
+  }
 }

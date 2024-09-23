@@ -27,5 +27,16 @@
 }
 
 .imageSizeWrapper {
+  width: 387px;
+  display: flex;
+  justify-content: center;
+  background: rgba(240, 241, 241, 1);
+  height: 100%;
+}
+
+.noImage {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
   height: 100%;
 }

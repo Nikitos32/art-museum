@@ -37,11 +37,11 @@ export const CatalogItemList = ({
         <EmptyResults />
       ) : query ? (
         fetchArt.map((elem) => {
-          return <CatalogItem art={elem} key={elem.image_id + '12'} />;
+          return <CatalogItem art={elem} key={elem.id} />;
         })
       ) : (
         arts.map((elem) => {
-          return <CatalogItem art={elem} key={elem.title + '12'} />;
+          return <CatalogItem art={elem} key={elem.id} />;
         })
       )}
     </div>
