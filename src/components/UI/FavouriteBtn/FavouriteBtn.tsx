@@ -4,11 +4,23 @@ import classNames from 'classnames';
 
 interface FavouriteBtnProps {
   background?: string;
+  artId: string;
 }
 
-export const FavouriteBtn = ({ background }: FavouriteBtnProps) => {
+export const FavouriteBtn = ({ background, artId }: FavouriteBtnProps) => {
+  const handleFavouriteBtnClick = () => {
+    let savedItems: string[] = [];
+    if (localStorage.getItem('favouriteArts')) {
+      savedItems = (localStorage.getItem('favouriteArts') as string).split(',');
+    }
+    savedItems.push(`${artId}`);
+    localStorage.setItem('favouriteArts', savedItems.join());
+  };
   return (
     <button
+      onClick={() => {
+        handleFavouriteBtnClick();
+      }}
       className={classNames(classes.favouritesBtn)}
       style={{ background: `${background}` }}
     >

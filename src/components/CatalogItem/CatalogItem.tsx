@@ -9,19 +9,21 @@ interface CatalogItemProps {
 
 export const CatalogItem = ({ art }: CatalogItemProps) => {
   return (
-    <Link
-      to={`${art.id}`}
-      className={classes.catalogItemWrapper}
-      style={{ textDecoration: 'none' }}
-    >
-      <img
-        src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
-        alt="image"
-        className={classes.imageSize}
-      />
+    <div className={classes.catalogItemWrapper}>
+      <Link
+        to={`${art.id}`}
+        className={classes.imageSizeWrapper}
+        style={{ textDecoration: 'none' }}
+      >
+        <img
+          src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
+          alt="image"
+          className={classes.imageSize}
+        />
+      </Link>
       <section className={classes.infoWrapper}>
         <CatalogItemInfo art={art} />
       </section>
-    </Link>
+    </div>
   );
 };

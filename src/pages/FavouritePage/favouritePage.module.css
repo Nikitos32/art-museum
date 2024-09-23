@@ -1,0 +1,25 @@
+.favouriteSectionTitle {
+  font-size: 64px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  width: 684px;
+  text-align: center;
+}
+
+.orangeText {
+  color: rgba(241, 121, 0, 1);
+}
+
+.favouriteSectionWrapper {
+  display: flex;
+  gap: 130px;
+  flex-direction: column;
+}
+
+.favouriteSavedWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
