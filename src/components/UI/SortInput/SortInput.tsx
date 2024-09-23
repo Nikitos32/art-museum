@@ -3,12 +3,14 @@ import classes from './sortInput.module.css';
 
 interface SortInputProps {
   handleSortValue: (event: ChangeEvent) => void;
+  disable: string;
 }
 
-export const SortInput = ({ handleSortValue }: SortInputProps) => {
+export const SortInput = ({ handleSortValue, disable }: SortInputProps) => {
   return (
     <div className={classes.selectWrapper}>
       <select
+        disabled={disable ? false : true}
         name="sortSelect"
         id="sortSelect"
         className={classes.sortSelect}

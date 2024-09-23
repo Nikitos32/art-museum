@@ -69,7 +69,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
         firstParagraph="Topics for you"
         secondParagraph="Our special gallery"
       />
-      <SortInput handleSortValue={handleSortValue} />
+      <SortInput disable={query} handleSortValue={handleSortValue} />
       <div className={classes.galleryWrapper}>
         {isLoading ? (
           <Oval
