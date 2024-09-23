@@ -16,6 +16,7 @@ export const App = () => {
         <Route index element={<MainPage />} />
         <Route path="/favourites" element={<FavouritePage />} />
         <Route path="/:artId" element={<ArtPage />} />
+        <Route path="/favourites/:artId" element={<ArtPage />} />
       </Route>
     )
   );

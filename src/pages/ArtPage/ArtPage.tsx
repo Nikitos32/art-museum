@@ -44,7 +44,7 @@ export const ArtPage = () => {
           </Link>
           <div className={classes.artPageWrapper}>
             <div className={classes.image}>
-              <FavouriteBtn background="white" />
+              <FavouriteBtn artId={art?.id} background="white" />
               <div className={classes.imageWrapper}>
                 <img
                   className={classes.imageSize}
