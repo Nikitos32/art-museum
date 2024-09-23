@@ -1,3 +1,4 @@
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import { MainLayout } from 'layouts/MainLayout/MainLayout';
 import { ArtPage } from 'pages/ArtPage/ArtPage';
 import { FavouritePage } from 'pages/FavouritePage/FavouritePage';
@@ -20,5 +21,9 @@ export const App = () => {
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+  return (
+    <ErrorBoundary fallback={<p>Error</p>}>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
+  );
 };

@@ -6,6 +6,7 @@
 
 .galleryWrapper {
   display: flex;
+  min-height: 570px;
   flex-direction: column;
 }
 
