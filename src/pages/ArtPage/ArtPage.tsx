@@ -77,7 +77,9 @@ export const ArtPage = () => {
                   </p>
                   <p>
                     <span className={classes.orangeText}>Dimensions: </span>
-                    {art?.dimensions.split(';')[0]}
+                    {art?.dimensions
+                      ? art?.dimensions.split(';')[0]
+                      : 'no dimensions'}
                   </p>
                   <p>
                     <span className={classes.orangeText}>Credit Line:</span>{' '}
