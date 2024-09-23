@@ -6,8 +6,8 @@ export const Header = () => {
   return (
     <header className={classes.headerWrapper}>
       <div className={classes.headerContent}>
-        <Link to="/">
-          <img src="src/assets/museum-logo-white.svg" alt="logo" />
+        <Link to="/art-museum">
+          <img src="/art-museum/src/assets/museum-logo-white.svg" alt="logo" />
         </Link>
         <Menu />
       </div>

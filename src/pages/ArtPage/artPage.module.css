@@ -88,7 +88,8 @@
   position: relative;
   bottom: 65px;
   left: 15px;
-  max-width: 497px;
+  background: rgba(240, 241, 241, 1);
+  width: 497px;
   height: 570px;
 }
 
@@ -114,4 +115,15 @@
   .imageSize {
     width: 300px;
   }
+
+  .imageWrapper {
+    width: 300px;
+  }
+}
+
+.noImage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

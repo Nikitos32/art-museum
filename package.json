@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -15,6 +17,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-ca16900-20240916",
+    "gh-pages": "^6.1.1",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "react": "^18.3.1",

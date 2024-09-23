@@ -51,11 +51,15 @@ export const ArtPage = () => {
             <div className={classes.image}>
               <FavouriteBtn artId={art?.id} background="white" />
               <div className={classes.imageWrapper}>
-                <img
-                  className={classes.imageSize}
-                  src={`https://www.artic.edu/iiif/2/${art?.image_id}/full/843,/0/default.jpg`}
-                  alt="image"
-                />
+                {!art?.image_id ? (
+                  <p className={classes.noImage}>No Image</p>
+                ) : (
+                  <img
+                    className={classes.imageSize}
+                    src={`https://www.artic.edu/iiif/2/${art?.image_id}/full/843,/0/default.jpg`}
+                    alt="image"
+                  />
+                )}
               </div>
             </div>
             <section className={classes.infoSection}>
