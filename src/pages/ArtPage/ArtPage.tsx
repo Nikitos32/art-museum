@@ -11,6 +11,7 @@ export const ArtPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const navigate = useNavigate();
   const param = useParams();
+
   useEffect(() => {
     setIsLoading(true);
     fetch(`https://api.artic.edu/api/v1/artworks/${param.artId}`)

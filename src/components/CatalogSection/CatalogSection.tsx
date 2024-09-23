@@ -45,7 +45,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
           setIsLoading(false);
         });
     } else {
-      fetch(`https://api.artic.edu/api/v1/artworks?page=${currentPage}&limit=3`)
+      fetch(`https://api.artic.edu/api/v1/artworks?page=${currentPage}&limit=3`) //&sort[source_updated_at][order]=desc
         .then((data) => {
           return data.json();
         })
