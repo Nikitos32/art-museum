@@ -9,17 +9,15 @@ interface OtherWorkItemProps {
 
 export const OtherWorkItem = ({ art }: OtherWorkItemProps) => {
   return (
-    <Link
-      to={`${art.id}`}
-      className={classes.otherWorkItemWrapper}
-      style={{ textDecoration: 'none' }}
-    >
-      <img
-        src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
-        alt="image"
-        className={classes.otherWorkImage}
-      />
+    <div className={classes.otherWorkItemWrapper}>
+      <Link to={`${art.id}`} style={{ textDecoration: 'none' }}>
+        <img
+          src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
+          alt="image"
+          className={classes.otherWorkImage}
+        />
+      </Link>
       <CatalogItemInfo art={art} />
-    </Link>
+    </div>
   );
 };

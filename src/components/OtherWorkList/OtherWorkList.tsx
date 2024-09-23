@@ -19,7 +19,7 @@ export const OtherWorkList = () => {
   return (
     <div className={classes.otherWorkListWrapper}>
       {(arts.data as ArtItem[]).map((elem) => {
-        return <OtherWorkItem art={elem} key={elem.image_id} />;
+        return <OtherWorkItem art={elem} key={elem.id} />;
       })}
     </div>
   );

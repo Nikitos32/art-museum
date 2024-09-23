@@ -2,7 +2,7 @@ import { CatalogItemList } from 'components/CatalogItemList/CatalogItemList';
 import { CatalogPagination } from 'components/CatalogPagination/CatalogPagination';
 import { CatalogSectionTitle } from 'components/CatalogSectionTitle/CatalogSectionTitle';
 import classes from './catalogSection.module.css';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import {
   ArtItem,
   Arts,
@@ -11,6 +11,7 @@ import {
 } from 'constants/interfaces';
 import { Oval } from 'react-loader-spinner';
 import useDebounce from 'hooks/useDebounce';
+import { SortInput } from 'components/UI/SortInput/SortInput';
 
 interface CatalogSectionProps {
   query: string;
@@ -22,6 +23,12 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
   const [searchResults, setSearchResults] = useState<SearchArtsItem[]>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const defferValueQuery = useDebounce<string>(query, 500);
+  const [sortOrder, setSortOrder] = useState<string>('none');
+
+  const handleSortValue = (event: ChangeEvent) => {
+    const target = event.target as HTMLInputElement;
+    setSortOrder(target.value);
+  };
 
   const handleCurrentPage = (clickedPage: number) => {
     setCurrentPage(clickedPage);
@@ -35,7 +42,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
     setIsLoading(true);
     if (defferValueQuery) {
       fetch(
-        `https://api.artic.edu/api/v1/artworks/search?q=${defferValueQuery}&limit=3&from=${currentPage * 3}`
+        `https://api.artic.edu/api/v1/artworks/search?q=${defferValueQuery}&limit=3&from=${currentPage * 3}${sortOrder === 'none' ? '' : `&sort[source_updated_at][order]=${sortOrder}`}`
       )
         .then((data) => {
           return data.json();
@@ -54,7 +61,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
           setIsLoading(false);
         });
     }
-  }, [currentPage, defferValueQuery]);
+  }, [currentPage, defferValueQuery, sortOrder]);
 
   return (
     <section className={classes.catalogWrapper}>
@@ -62,6 +69,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
         firstParagraph="Topics for you"
         secondParagraph="Our special gallery"
       />
+      <SortInput disable={query} handleSortValue={handleSortValue} />
       <div className={classes.galleryWrapper}>
         {isLoading ? (
           <Oval
