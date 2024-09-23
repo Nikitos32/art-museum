@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import classes from './artPage.module.css';
 import { useEffect, useState } from 'react';
 import { ArtItem, Arts } from 'constants/interfaces';
@@ -9,6 +9,7 @@ import { FavouriteBtn } from 'components/UI/FavouriteBtn/FavouriteBtn';
 export const ArtPage = () => {
   const [art, setArt] = useState<ArtItem>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
   const param = useParams();
   useEffect(() => {
     setIsLoading(true);
@@ -37,11 +38,14 @@ export const ArtPage = () => {
         />
       ) : (
         <div className={classes.wrapper}>
-          <Link to="/">
-            <button className={classes.backBtn}>
+          <div>
+            <button
+              className={classes.backBtn}
+              onClick={() => navigate('..', { relative: 'path' })}
+            >
               <IoChevronBackOutline size={24} color="rgba(241, 121, 0, 1)" />
             </button>
-          </Link>
+          </div>
           <div className={classes.artPageWrapper}>
             <div className={classes.image}>
               <FavouriteBtn artId={art?.id} background="white" />
