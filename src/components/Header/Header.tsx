@@ -7,7 +7,7 @@ export const Header = () => {
     <header className={classes.headerWrapper}>
       <div className={classes.headerContent}>
         <Link to="/art-museum">
-          <img src="/art-museum/src/assets/museum-logo-white.svg" alt="logo" />
+          <img src="./museum-logo-white.svg" alt="logo" />
         </Link>
         <Menu />
       </div>

@@ -4,6 +4,7 @@
   align-items: center;
   height: 127px;
   flex-shrink: 0;
+  padding: 0 15px;
 }
 
 .footerContent {

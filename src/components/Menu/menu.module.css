@@ -16,3 +16,10 @@
 .iconColor {
   color: rgba(224, 164, 73, 1);
 }
+
+@media screen and (max-width: 470px) {
+  .menuSection {
+    justify-content: center;
+    flex-direction: column;
+  }
+}

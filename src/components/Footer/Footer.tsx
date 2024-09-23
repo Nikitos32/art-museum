@@ -6,10 +6,10 @@ export const Footer = () => {
     <footer className={classes.footerWrapper}>
       <div className={classes.footerContent}>
         <Link to="/art-museum">
-          <img src="/art-museum/src/assets/museum-logo-black.svg" alt="logo" />
+          <img src="./museum-logo-black.svg" alt="logo" />
         </Link>
         <Link to="https://www.modsen-software.com/">
-          <img src="/art-museum/src/assets/logo-modsen.svg" alt="logo" />
+          <img src="./logo-modsen.svg" alt="logo" />
         </Link>
       </div>
     </footer>
