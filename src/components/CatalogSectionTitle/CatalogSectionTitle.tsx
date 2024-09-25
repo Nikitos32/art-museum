@@ -1,9 +1,5 @@
+import { CatalogSectionTitleProps } from 'constants/types';
 import classes from './catalogSectionTitle.module.css';
-
-interface CatalogSectionTitleProps {
-  firstParagraph: string;
-  secondParagraph: string;
-}
 
 export const CatalogSectionTitle = ({
   firstParagraph,

@@ -1,11 +1,7 @@
 import { PaginationBtn } from 'components/UI/PaginationBtn/PaginationBtn';
 import classes from './catalogPagination.module.css';
 import { IoIosArrowForward } from 'react-icons/io';
-
-interface catalogPaginationProps {
-  currentPage: number;
-  handleCurrentPage: (clickedPage: number) => void;
-}
+import { catalogPaginationProps } from 'constants/types';
 
 export const CatalogPagination = ({
   currentPage,

@@ -1,15 +1,9 @@
 import { CatalogItem } from 'components/CatalogItem/CatalogItem';
 import classes from './catalogItemList.module.css';
-import { ArtItem, Arts, SearchArtsItem } from 'constants/interfaces';
+import { ArtItem, Arts } from 'constants/interfaces';
 import { useEffect, useState } from 'react';
 import { EmptyResults } from 'components/EmptyResults/EmptyResults';
-
-interface CatalogItemListProps {
-  arts: ArtItem[];
-  searchArts?: SearchArtsItem[];
-  query: string;
-  handleLoading: (type: boolean) => void;
-}
+import { CatalogItemListProps } from 'constants/types';
 
 export const CatalogItemList = ({
   query,

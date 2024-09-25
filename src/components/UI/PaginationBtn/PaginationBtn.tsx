@@ -1,10 +1,5 @@
+import { PaginationBtnProps } from 'constants/types';
 import classes from './paginationBtn.module.css';
-
-interface PaginationBtnProps {
-  value: string;
-  active: boolean;
-  handleCurrentPage: (clickedPage: number) => void;
-}
 
 export const PaginationBtn = ({
   handleCurrentPage,

@@ -9,13 +9,10 @@ import {
   SearchArts,
   SearchArtsItem,
 } from 'constants/interfaces';
-import { Oval } from 'react-loader-spinner';
 import useDebounce from 'hooks/useDebounce';
 import { SortInput } from 'components/UI/SortInput/SortInput';
-
-interface CatalogSectionProps {
-  query: string;
-}
+import { Loader } from 'components/Loader/Loader';
+import { CatalogSectionProps } from 'constants/types';
 
 export const CatalogSection = ({ query }: CatalogSectionProps) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -72,16 +69,7 @@ export const CatalogSection = ({ query }: CatalogSectionProps) => {
       <SortInput disable={query} handleSortValue={handleSortValue} />
       <div className={classes.galleryWrapper}>
         {isLoading ? (
-          <Oval
-            visible={true}
-            height="80"
-            width="80"
-            secondaryColor="rgba(224, 164, 73, 1)"
-            color="rgba(241, 121, 0, 1)"
-            ariaLabel="oval-loading"
-            wrapperStyle={{}}
-            wrapperClass={classes.loader}
-          />
+          <Loader />
         ) : (
           <CatalogItemList
             handleLoading={handleLoading}

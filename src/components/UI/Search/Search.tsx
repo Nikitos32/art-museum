@@ -1,16 +1,7 @@
 import { CiSearch } from 'react-icons/ci';
 import classes from './search.module.css';
-import { ChangeEvent } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-
-interface SearchProps {
-  handleQuery: (event: ChangeEvent) => void;
-  query: string;
-}
-
-interface Inputs {
-  search: string;
-}
+import { Inputs, SearchProps } from 'constants/types';
 
 export const Search = ({ handleQuery, query }: SearchProps) => {
   const { register, handleSubmit } = useForm<Inputs>();

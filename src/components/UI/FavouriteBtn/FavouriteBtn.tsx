@@ -1,12 +1,8 @@
 import classes from './favouriteBtn.module.css';
 import classNames from 'classnames';
+import { FavouriteBtnProps } from 'constants/types';
 import { useState } from 'react';
 import { BsBookmarkCheckFill, BsBookmarkPlus } from 'react-icons/bs';
-
-interface FavouriteBtnProps {
-  background?: string;
-  artId?: string;
-}
 
 export const FavouriteBtn = ({ background, artId }: FavouriteBtnProps) => {
   const [, setLSItem] = useState<string>();

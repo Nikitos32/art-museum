@@ -1,11 +1,6 @@
 import { Search } from 'components/UI/Search/Search';
 import classes from './searchSection.module.css';
-import { ChangeEvent } from 'react';
-
-interface SearchSectionProps {
-  handleQuery: (event: ChangeEvent) => void;
-  query: string;
-}
+import { SearchSectionProps } from 'constants/types';
 
 export const SearchSection = ({ handleQuery, query }: SearchSectionProps) => {
   return (

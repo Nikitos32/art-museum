@@ -1,10 +1,6 @@
 import { ChangeEvent } from 'react';
 import classes from './sortInput.module.css';
-
-interface SortInputProps {
-  handleSortValue: (event: ChangeEvent) => void;
-  disable: string;
-}
+import { SortInputProps } from 'constants/types';
 
 export const SortInput = ({ handleSortValue, disable }: SortInputProps) => {
   return (

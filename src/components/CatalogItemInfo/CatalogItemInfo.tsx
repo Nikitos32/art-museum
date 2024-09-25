@@ -1,11 +1,7 @@
 import classes from './catalogItemInfo.module.css';
-import { ArtItem } from 'constants/interfaces';
 import { FavouriteBtn } from 'components/UI/FavouriteBtn/FavouriteBtn';
 import { Link } from 'react-router-dom';
-
-interface CatalogItemInfoProps {
-  art?: ArtItem;
-}
+import { CatalogItemInfoProps } from 'constants/types';
 
 export const CatalogItemInfo = ({ art }: CatalogItemInfoProps) => {
   return (

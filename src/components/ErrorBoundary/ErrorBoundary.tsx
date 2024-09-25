@@ -1,9 +1,5 @@
-import { Component, ReactNode } from 'react';
-
-type Props = {
-  children: ReactNode;
-  fallback: ReactNode;
-};
+import { Props } from 'constants/types';
+import { Component } from 'react';
 
 export default class ErrorBoundary extends Component<Props> {
   state = { hasError: false };

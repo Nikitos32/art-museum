@@ -1,11 +1,7 @@
-import { ArtItem } from 'constants/interfaces';
 import classes from './catalogItem.module.css';
 import { CatalogItemInfo } from 'components/CatalogItemInfo/CatalogItemInfo';
 import { Link } from 'react-router-dom';
-
-interface CatalogItemProps {
-  art: ArtItem;
-}
+import { CatalogItemProps } from 'constants/types';
 
 export const CatalogItem = ({ art }: CatalogItemProps) => {
   return (

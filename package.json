@@ -10,7 +10,8 @@
     "predeploy": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "homepage": "https://Nikitos32.github.io/art-museum"
   },
   "dependencies": {
     "classnames": "^2.5.1",
