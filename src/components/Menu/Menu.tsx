@@ -16,7 +16,12 @@ export const Menu = () => {
             : classes.menuSection
         }
       >
-        <Link to="/" className={classes.menuItem} aria-label="burger">
+        <Link
+          to="/"
+          className={classes.menuItem}
+          aria-label="burger"
+          data-testid="favouriteBtn"
+        >
           Home
         </Link>
         <Link to="/favourites" className={classes.menuItem} aria-label="burger">

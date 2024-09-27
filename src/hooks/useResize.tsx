@@ -15,7 +15,10 @@ export const useResize = () => {
 
   const handleClick = (event: Event) => {
     const target = event.target as Element;
-    if (!target.ariaLabel && isBurgerOpen) {
+    if (
+      !target.ariaLabel ||
+      (!target.ariaLabel.includes('burger') && isBurgerOpen)
+    ) {
       handleBurger();
     }
   };

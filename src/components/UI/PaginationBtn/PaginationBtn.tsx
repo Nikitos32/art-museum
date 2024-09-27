@@ -8,6 +8,7 @@ export const PaginationBtn = ({
 }: PaginationBtnProps) => {
   return (
     <button
+      aria-label="1"
       onClick={() => handleCurrentPage(+value)}
       className={active ? classes.activeBtn : classes.paginationBtn}
     >
