@@ -19,9 +19,20 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-compiler"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-compiler",
+    "simple-import-sort",
+    "import"
+  ],
   "rules": {
-    "react-compiler/react-compiler": "error"
+    "react-compiler/react-compiler": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   },
   "settings": {
     "react": {
