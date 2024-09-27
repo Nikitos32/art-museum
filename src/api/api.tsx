@@ -100,3 +100,19 @@ export const useFetchArt = () => {
 
   return { art, isLoading };
 };
+
+export const useFetchOtherWorkList = () => {
+  const [arts, setArts] = useState<Arts>({ data: [] });
+
+  useEffect(() => {
+    fetch(`https://api.artic.edu/api/v1/artworks?page=6&limit=9`)
+      .then((data) => {
+        return data.json();
+      })
+      .then((data: Arts) => {
+        setArts(data);
+      });
+  }, []);
+
+  return [arts];
+};

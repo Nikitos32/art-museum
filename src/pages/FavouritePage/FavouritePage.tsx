@@ -1,4 +1,3 @@
-import { PiBookmarkSimpleBold } from 'react-icons/pi';
 import classes from './favouritePage.module.css';
 import { CatalogSectionTitle } from 'components/CatalogSectionTitle/CatalogSectionTitle';
 import { EmptyResults } from 'components/EmptyResults/EmptyResults';
@@ -14,10 +13,7 @@ export const FavouritePage = memo(function FavouritePage() {
     <section className={classes.favouriteSectionWrapper}>
       <p className={classes.favouriteSectionTitle}>
         Here Are Your
-        <span className={classes.orangeText}>
-          <PiBookmarkSimpleBold size={48} color="rgba(241, 121, 0, 1)" />{' '}
-          Favourites
-        </span>
+        <span className={classes.orangeText}>Favourites</span>
       </p>
       <div className={classes.favouriteSavedWrapper}>
         <CatalogSectionTitle

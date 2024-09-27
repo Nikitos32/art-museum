@@ -1,21 +1,10 @@
 import { OtherWorkItem } from 'components/OtherWorkItem/OtherWorkItem';
 import classes from './otherWorkList.module.css';
-import { useEffect, useState } from 'react';
-import { ArtItem, Arts } from 'constants/interfaces';
+import { ArtItem } from 'constants/interfaces';
+import { useFetchOtherWorkList } from 'api/api';
 
 export const OtherWorkList = () => {
-  const [arts, setArts] = useState<Arts>({ data: [] });
-
-  useEffect(() => {
-    fetch(`https://api.artic.edu/api/v1/artworks?page=6&limit=9`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((data: Arts) => {
-        setArts(data);
-      });
-  }, []);
-
+  const [arts] = useFetchOtherWorkList();
   return (
     <div className={classes.otherWorkListWrapper}>
       {(arts.data as ArtItem[]).map((elem) => {

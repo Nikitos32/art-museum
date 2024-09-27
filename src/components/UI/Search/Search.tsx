@@ -1,4 +1,3 @@
-import { CiSearch } from 'react-icons/ci';
 import classes from './search.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Inputs, SearchProps } from 'constants/types';
@@ -20,7 +19,7 @@ export const Search = ({ handleQuery, query }: SearchProps) => {
         type="text"
       />
       <button type="submit" className={classes.searchBtn}>
-        <CiSearch size={20} />
+        {'>'}
       </button>
     </form>
   );

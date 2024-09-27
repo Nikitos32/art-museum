@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import classes from './artPage.module.css';
 import { memo } from 'react';
-import { IoChevronBackOutline } from 'react-icons/io5';
 import { Loader } from 'components/Loader/Loader';
 import { useFetchArt } from 'api/api';
 import { MainArtPageInfo } from 'components/MainArtPageInfo/MainArtPageInfo';
@@ -23,7 +22,8 @@ export const ArtPage = memo(function ArtPage() {
               className={classes.backBtn}
               onClick={() => navigate('..', { relative: 'path' })}
             >
-              <IoChevronBackOutline size={24} color="rgba(241, 121, 0, 1)" />
+              <p>{'<'}</p>
+              {/* rgba(241, 121, 0, 1) */}
             </button>
           </div>
           <div className={classes.artPageWrapper}>
