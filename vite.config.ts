@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      tests: '/src/tests',
       helpers: '/src/helpers',
       api: '/src/api',
       components: '/src/components',
