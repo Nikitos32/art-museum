@@ -1,0 +1,29 @@
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.imageWrapper {
+  z-index: -1;
+  position: relative;
+  bottom: 65px;
+  left: 15px;
+  background: rgba(240, 241, 241, 1);
+  width: 497px;
+  height: 570px;
+}
+
+@media screen and (max-width: 620px) {
+  .imageWrapper {
+    width: 300px;
+  }
+}
+
+.noImage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

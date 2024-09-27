@@ -6,11 +6,7 @@ import { CatalogItemProps } from 'constants/types';
 export const CatalogItem = ({ art }: CatalogItemProps) => {
   return (
     <div className={classes.catalogItemWrapper}>
-      <Link
-        to={`${art.id}`}
-        className={classes.imageSizeWrapper}
-        style={{ textDecoration: 'none' }}
-      >
+      <Link to={`${art.id}`} className={classes.imageSizeWrapper}>
         {!art.image_id ? (
           <div className={classes.noImage}>
             {' '}
@@ -21,6 +17,7 @@ export const CatalogItem = ({ art }: CatalogItemProps) => {
             src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
             alt="image"
             className={classes.imageSize}
+            loading="lazy"
           />
         )}
       </Link>

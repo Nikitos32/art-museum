@@ -2,9 +2,9 @@ import { SearchSection } from 'components/SearchSection/SearchSection';
 import classes from './mainPage.module.css';
 import { CatalogSection } from 'components/CatalogSection/CatalogSection';
 import { OtherWorkSection } from 'components/OtherWorkSection/OtherWorkSection';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, memo, useState } from 'react';
 
-export const MainPage = () => {
+export const MainPage = memo(function MainPage() {
   const [query, setQuery] = useState<string>('');
 
   const handleQuery = (event?: ChangeEvent) => {
@@ -21,4 +21,4 @@ export const MainPage = () => {
       </div>
     </main>
   );
-};
+});

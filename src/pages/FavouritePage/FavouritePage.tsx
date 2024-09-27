@@ -5,8 +5,9 @@ import { EmptyResults } from 'components/EmptyResults/EmptyResults';
 import { OtherWorkItem } from 'components/OtherWorkItem/OtherWorkItem';
 import { Loader } from 'components/Loader/Loader';
 import { useFetchFavouriteArts } from 'api/api';
+import { memo } from 'react';
 
-export const FavouritePage = () => {
+export const FavouritePage = memo(function FavouritePage() {
   const { fetchArt, isLoading } = useFetchFavouriteArts();
 
   return (
@@ -39,4 +40,4 @@ export const FavouritePage = () => {
       </div>
     </section>
   );
-};
+});

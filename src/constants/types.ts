@@ -91,3 +91,7 @@ export interface SortInputProps {
   handleSortValue: (event: ChangeEvent) => void;
   disable: string;
 }
+
+export interface MainArtPageInfoProps {
+  art: ArtItem;
+}

@@ -1,0 +1,44 @@
+.infoSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapperInfoSectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.authorInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orangeText {
+  color: rgba(224, 164, 73, 1);
+}
+
+.dateText {
+  font-weight: 700;
+}
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.overviewText {
+  font-size: 32px;
+  font-weight: 400px;
+}
+.overviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

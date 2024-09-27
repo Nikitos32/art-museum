@@ -1,5 +1,6 @@
 import { ArtItem, Arts, SearchArts, SearchArtsItem } from 'constants/types';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export const useFetchSearchArts = (searchArts: SearchArtsItem[]) => {
   const [fetchArt, setFetchArt] = useState<ArtItem[]>([]);
@@ -78,4 +79,24 @@ export const useFetchCatalogArts = (
     }
   }, [currentPage, defferValueQuery, sortOrder]);
   return { isLoading, searchResults, arts, setIsLoading };
+};
+
+export const useFetchArt = () => {
+  const [art, setArt] = useState<ArtItem>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const param = useParams();
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(`https://api.artic.edu/api/v1/artworks/${param.artId}`)
+      .then((data) => {
+        return data.json();
+      })
+      .then((data: Arts) => {
+        setIsLoading(false);
+        setArt(data.data as ArtItem);
+      });
+  }, []);
+
+  return { art, isLoading };
 };
