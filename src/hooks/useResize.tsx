@@ -21,12 +21,15 @@ export const useResize = () => {
   };
 
   useEffect(() => {
+    window.addEventListener('click', handleClick);
+    window.removeEventListener('resize', handleResize);
     window.addEventListener('resize', handleResize);
     window.addEventListener('click', handleClick);
     return () => {
+      window.addEventListener('click', handleClick);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isBurgerOpen]);
 
   return { width, isBurgerOpen, handleBurger };
 };
