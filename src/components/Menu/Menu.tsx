@@ -1,16 +1,10 @@
 import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
 import classes from './menu.module.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { useResize } from 'hooks/useResize';
 
 export const Menu = () => {
-  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
-  const [width] = useResize();
-
-  const handleBurger = () => {
-    setIsBurgerOpen(!isBurgerOpen);
-  };
+  const { width, handleBurger, isBurgerOpen } = useResize();
 
   return (
     <section className={classes.menuWrapper}>
@@ -22,10 +16,10 @@ export const Menu = () => {
             : classes.menuSection
         }
       >
-        <Link to="/" className={classes.menuItem}>
+        <Link to="/" className={classes.menuItem} aria-label="burger">
           Home
         </Link>
-        <Link to="/favourites" className={classes.menuItem}>
+        <Link to="/favourites" className={classes.menuItem} aria-label="burger">
           Your favorites
         </Link>
       </div>
