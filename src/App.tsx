@@ -19,7 +19,8 @@ export const App = () => {
         <Route path="/art-museum/:artId" element={<ArtPage />} />
         <Route path="/art-museum/favourites/:artId" element={<ArtPage />} />
       </Route>
-    )
+    ),
+    { basename: '/art-museum' }
   );
   return (
     <ErrorBoundary fallback={<p>Error</p>}>
