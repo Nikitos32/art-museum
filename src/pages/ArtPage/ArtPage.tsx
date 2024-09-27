@@ -23,7 +23,6 @@ export const ArtPage = memo(function ArtPage() {
               onClick={() => navigate('..', { relative: 'path' })}
             >
               <p>{'<'}</p>
-              {/* rgba(241, 121, 0, 1) */}
             </button>
           </div>
           <div className={classes.artPageWrapper}>

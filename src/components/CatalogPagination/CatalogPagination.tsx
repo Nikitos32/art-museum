@@ -2,6 +2,7 @@ import { PaginationBtn } from 'components/UI/PaginationBtn/PaginationBtn';
 import classes from './catalogPagination.module.css';
 import { catalogPaginationProps } from 'constants/types';
 import { usePagination } from 'hooks/usePagination';
+import { MAX_PAGE } from 'constants/constants';
 
 export const CatalogPagination = ({
   currentPage,
@@ -22,7 +23,7 @@ export const CatalogPagination = ({
       })}
       <button
         onClick={() => {
-          if (currentPage !== 101) {
+          if (currentPage !== MAX_PAGE) {
             handleCurrentPage(currentPage + 1);
           }
         }}

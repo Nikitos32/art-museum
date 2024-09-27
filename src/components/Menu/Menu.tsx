@@ -2,6 +2,7 @@ import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
 import classes from './menu.module.css';
 import { Link } from 'react-router-dom';
 import { useResize } from 'hooks/useResize';
+import { WIDTH_MD } from 'constants/constants';
 
 export const Menu = () => {
   const { width, handleBurger, isBurgerOpen } = useResize();
@@ -11,7 +12,7 @@ export const Menu = () => {
       <BurgerMenu handleBurger={handleBurger} />
       <div
         className={
-          isBurgerOpen && width < 700
+          isBurgerOpen && width < WIDTH_MD
             ? classes.menuSectionIsOpen
             : classes.menuSection
         }

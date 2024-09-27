@@ -8,10 +8,11 @@ import { SortInput } from 'components/UI/SortInput/SortInput';
 import { Loader } from 'components/Loader/Loader';
 import { CatalogSectionProps } from 'constants/types';
 import { useFetchCatalogArts } from 'api/api';
+import { DEBOUNCE_DELAY_MC } from 'constants/constants';
 
 export const CatalogSection = ({ query }: CatalogSectionProps) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const defferValueQuery = useDebounce<string>(query, 500);
+  const defferValueQuery = useDebounce<string>(query, DEBOUNCE_DELAY_MC);
   const [sortOrder, setSortOrder] = useState<string>('none');
   const { isLoading, searchResults, arts, setIsLoading } = useFetchCatalogArts(
     defferValueQuery,

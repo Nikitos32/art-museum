@@ -22,9 +22,7 @@ export const FavouriteBtn = ({ background, artId }: FavouriteBtnProps) => {
       {localStorage.getItem('favouriteArts')?.includes(`${artId}`) ? (
         <p>Saved</p>
       ) : (
-        //"rgba(241, 121, 0, 1)"
         <p>Add</p>
-        //"rgba(241, 121, 0, 1)"
       )}
     </button>
   );
