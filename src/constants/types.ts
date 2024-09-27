@@ -95,3 +95,7 @@ export interface SortInputProps {
 export interface MainArtPageInfoProps {
   art: ArtItem;
 }
+
+export interface BurgerMenuProps {
+  handleBurger: () => void;
+}
