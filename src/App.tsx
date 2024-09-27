@@ -13,11 +13,11 @@ import {
 export const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/art-museum" element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />}>
         <Route index element={<MainPage />} />
-        <Route path="/art-museum/favourites" element={<FavouritePage />} />
-        <Route path="/art-museum/:artId" element={<ArtPage />} />
-        <Route path="/art-museum/favourites/:artId" element={<ArtPage />} />
+        <Route path="/favourites" element={<FavouritePage />} />
+        <Route path="/:artId" element={<ArtPage />} />
+        <Route path="/favourites/:artId" element={<ArtPage />} />
       </Route>
     ),
     { basename: '/art-museum' }
